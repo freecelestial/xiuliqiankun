@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>袖裡乾坤</title>
+<meta name="description" content="袖裡乾坤——梅花易占、飛星風水、紫微推命三款命理 App。卜以問事，相以觀勢，命以知途。">
+<link rel="icon" href="assets/meihua.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700;900&display=swap">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --paper: #f3ede0; --paper-deep: #ece4d2; --ink: #2b2520; --muted: #6b6259;
+    --seal: #a8231a; --seal-dk: #7c1a13; --gold: #9a7b2d; --line: #d9cfbd;
+  }
+  body {
+    background: var(--paper); color: var(--ink);
+    font-family: "Noto Serif TC", "PMingLiU", serif; line-height: 1.8;
+  }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 64px 24px 48px; }
+  header { text-align: center; margin-bottom: 56px; }
+  .seal-mark {
+    display: inline-block; border: 3px solid var(--seal); color: var(--seal);
+    font-size: 40px; font-weight: 900; letter-spacing: 10px; text-indent: 10px;
+    padding: 14px 18px 12px 28px; line-height: 1.35;
+    writing-mode: vertical-rl; text-orientation: upright;
+    border-radius: 6px; margin-bottom: 24px;
+  }
+  .tagline { font-size: 16px; color: var(--muted); letter-spacing: 0.2em; }
+  .apps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+  @media (max-width: 760px) { .apps { grid-template-columns: 1fr; max-width: 420px; margin: 0 auto; } }
+  .card {
+    background: #faf6ec; border: 1px solid var(--line); border-radius: 10px;
+    padding: 32px 24px 26px; text-align: center; display: flex; flex-direction: column; gap: 14px; align-items: center;
+  }
+  .card img { width: 108px; height: 108px; border-radius: 24px; box-shadow: 0 2px 10px rgba(43,37,32,.12); }
+  .card h2 { font-size: 19px; letter-spacing: 0.06em; font-weight: 700; }
+  .card h2 .brand { display: block; font-size: 12px; color: var(--gold); letter-spacing: 0.3em; margin-bottom: 4px; font-weight: 500; }
+  .card p { font-size: 13.5px; color: var(--muted); min-height: 66px; }
+  .btn {
+    display: inline-block; background: var(--seal); color: #f7f0e0; font-size: 14px;
+    letter-spacing: 0.15em; padding: 9px 26px; border-radius: 4px; text-decoration: none;
+  }
+  .btn:hover { background: var(--seal-dk); }
+  .btn.soon { background: transparent; color: var(--muted); border: 1px dashed var(--muted); cursor: default; }
+  .links { font-size: 12px; color: var(--muted); }
+  .links a { color: var(--gold); text-decoration: none; margin: 0 4px; }
+  .links a:hover { text-decoration: underline; }
+  footer { margin-top: 64px; padding-top: 20px; border-top: 1px solid var(--line);
+           text-align: center; font-size: 12.5px; color: var(--muted); letter-spacing: 0.05em; }
+  footer a { color: var(--gold); text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="seal-mark">袖裡乾坤</div>
+    <p class="tagline">卜以問事　相以觀勢　命以知途</p>
+  </header>
+  <main class="apps">
+    <section class="card">
+      <img src="assets/meihua.png" alt="梅花易占 App icon">
+      <h2><span class="brand">袖裡乾坤</span>梅花易占</h2>
+      <p>梅花易數與六爻金錢卦。心動起卦、機緣對應，體用生剋與用神旺衰一次看清。</p>
+      <span class="btn soon">封測中・即將上線</span>
+      <div class="links">
+        <a href="https://meihua-fc.web.app/privacy">隱私政策</a>·<a href="https://meihua-fc.web.app/terms">使用條款</a>
+      </div>
+    </section>
+    <section class="card">
+      <img src="assets/feng.png" alt="飛星風水 App icon">
+      <h2><span class="brand">袖裡乾坤</span>飛星風水</h2>
+      <p>玄空飛星排盤與方位分析。羅盤定向、九宮飛星，居家格局吉凶一目了然。</p>
+      <a class="btn" href="https://play.google.com/store/apps/details?id=com.maxroles.feng_shui_star">Google Play</a>
+      <div class="links">
+        <a href="https://feng-shui-star.web.app/privacy">隱私政策</a>·<a href="https://feng-shui-star.web.app/terms">使用條款</a>
+      </div>
+    </section>
+    <section class="card">
+      <img src="assets/ziwei.png" alt="紫微推命 App icon">
+      <h2><span class="brand">袖裡乾坤</span>紫微推命</h2>
+      <p>紫微斗數排盤與命格解說。十二宮星曜、大限流年，AI 輔助深入解讀。</p>
+      <a class="btn" href="https://play.google.com/store/apps/details?id=com.maxroles.fate_app">Google Play</a>
+      <div class="links">
+        <a href="ziwei/privacy.html">隱私政策・使用條款</a>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>© 2026 袖裡乾坤 · 聯絡：<a href="mailto:freecelestial@gmail.com">freecelestial@gmail.com</a></p>
+  </footer>
+</div>
+</body>
+</html>
