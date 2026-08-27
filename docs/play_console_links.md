@@ -23,7 +23,7 @@ Play Console → 該 App →「商店資訊和設定 › 商店設定 › 商店
 |------|----------|----------|
 | zh-TW | 更多作品：袖裡乾坤官網 https://freecelestial.github.io/xiuliqiankun/ | 同左 |
 | zh-CN | 更多作品：袖里乾坤官网 https://freecelestial.github.io/xiuliqiankun/ | 同左 |
-| en | More from Xiuli Qiankun — Meihua I-Ching and Ziwei Astrology: https://freecelestial.github.io/xiuliqiankun/ | More from Xiuli Qiankun — Meihua I-Ching and Flying Stars Feng Shui: https://freecelestial.github.io/xiuliqiankun/ |
+| en | More from Xiuli Qiankun — Meihua I-Ching and Purple Star Astrology: https://freecelestial.github.io/xiuliqiankun/ | More from Xiuli Qiankun — Meihua I-Ching and Feng Shui Stars: https://freecelestial.github.io/xiuliqiankun/ |
 | ja | 同シリーズのアプリ（梅花易占・紫微推命）：袖裏乾坤 https://freecelestial.github.io/xiuliqiankun/ | 同シリーズのアプリ（梅花易占・飛星風水）：袖裏乾坤 https://freecelestial.github.io/xiuliqiankun/ |
 | ko | 같은 시리즈 앱(매화역점·자미추명): 수리건곤 https://freecelestial.github.io/xiuliqiankun/ | 같은 시리즈 앱(매화역점·비성풍수): 수리건곤 https://freecelestial.github.io/xiuliqiankun/ |
 
