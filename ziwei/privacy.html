@@ -8,9 +8,11 @@
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { font-family: -apple-system, "Segoe UI", "Noto Sans TC", sans-serif; font-size: 15px; line-height: 1.75; color: #333; background: #fff; }
   .container { max-width: 680px; margin: 0 auto; padding: 32px 20px 60px; }
-  .lang-bar { display: flex; justify-content: flex-end; margin-bottom: 24px; }
+  html[lang="ja"] body { font-family: -apple-system, "Segoe UI", "Hiragino Sans", "Yu Gothic", "Noto Sans JP", sans-serif; }
+  .lang-bar { display: flex; justify-content: flex-end; gap: 6px; margin-bottom: 24px; }
   .lang-btn { background: none; border: 1px solid #a8231a; color: #a8231a; padding: 4px 14px; border-radius: 4px; cursor: pointer; font-size: 13px; }
   .lang-btn:hover { background: #fdf2f2; }
+  .lang-btn[aria-pressed="true"] { background: #a8231a; color: #fff; cursor: default; }
   h1 { font-size: 22px; font-weight: 700; margin: 8px 0 4px; color: #1a1a1a; }
   .subtitle { font-size: 13px; color: #888; margin-bottom: 24px; }
   h2 { font-size: 15px; font-weight: 700; margin: 22px 0 8px; color: #1a1a1a; }
@@ -23,7 +25,11 @@
 </head>
 <body>
 <div class="container">
-  <div class="lang-bar"><button class="lang-btn" id="langBtn" onclick="toggleLang()">English</button></div>
+  <div class="lang-bar">
+    <button class="lang-btn" data-lang="zh-TW" onclick="setLang('zh-TW')">中文</button>
+    <button class="lang-btn" data-lang="en" onclick="setLang('en')">English</button>
+    <button class="lang-btn" data-lang="ja" onclick="setLang('ja')">日本語</button>
+  </div>
   <div id="zh">
 <h1>隱私權政策</h1>
 <p class="subtitle">紫微推命 · 2026-08-20</p>
@@ -82,16 +88,69 @@
 <h2>7. Advertising and Paid Features</h2><p>The service currently offers advertisements (including rewarded and banner ads) and in-app purchases (points packs via Apple App Store or Google Play) to sustain operations. Ad-related data is handled in accordance with this Privacy Policy; the price and content of paid items will be clearly stated before purchase.</p>
 <h2>Contact</h2><p>Email：<a href='mailto:node.7.claw@gmail.com'>node.7.claw@gmail.com</a></p>
   </div>
+  <div id="ja" style="display:none">
+<h1>プライバシーポリシー</h1>
+<p class="subtitle">紫微推命 · 施行日：2026-08-20</p>
+<h2>1. 収集するデータ</h2><ul>
+<li><strong>アカウント情報</strong>：Google または LINE でログインする際、お名前とメールアドレスを取得します（OAuth 認証により提供されます）。</li>
+<li><strong>個人情報</strong>：お客様が任意で入力する生年月日・時辰は、命盤の算出および関連する解説機能にのみ使用し、その他の目的に使用したり第三者に提供したりすることはありません。そのため本名の入力はおすすめしません。本名を入力する必要もありません。</li>
+<li><strong>サブアカウント情報</strong>：サブアカウントを作成し、第三者の名前と生年月日を入力することができます。このデータは命盤算出のみに使用され、お客様のアカウントに紐付けられ、外部に公開されることはありません。</li>
+<li><strong>利用記録</strong>：システムはお客様の操作履歴（閲覧・検索など）を記録し、サービス品質の維持および不正利用防止に活用します。</li>
+</ul>
+<h2>2. データの利用目的</h2><p>お客様のデータは以下の目的にのみ使用します：</p><ul>
+<li>コア機能の提供（命盤算出、AI 分析）</li>
+<li>本人確認およびアカウントの安全維持</li>
+<li>サービス品質とユーザー体験の向上</li>
+<li>お客様からのフィードバックへの返信（サポートの返信は AI の支援により作成される場合があります）。</li>
+</ul><p>お客様の個人情報を第三者に販売したり、無償で提供したりすることはありません。</p>
+<h2>3. サードパーティログイン</h2><p>本サービスは Google OAuth および LINE Login を使用して本人確認を行います。ログインの過程におけるデータの取り扱いは各プラットフォームのプライバシーポリシーに従いますので、あわせてご確認ください。</p>
+<h2>4. セッションとローカルストレージ</h2><p>ログイン状態の維持にセッショントークンを使用します。ログアウトまたはトークンの有効期限切れにより、アクセス権限は自動的に失効し、再度ログインが必要になります。</p>
+<h2>5. データの保存と削除</h2><p>アカウント情報は、お客様がアカウントを削除または停止されるまで保存されます。削除をご希望の場合はサポートまでご連絡ください。合理的な期間内に対応いたします。</p>
+<h2>6. セキュリティ</h2><p>業界標準の暗号化およびアクセス制御によりお客様のデータを保護していますが、インターネット通信の絶対的な安全を保証することはできません。アカウント情報は適切に管理してください。</p>
+<h1 style='margin-top:40px'>利用規約</h1>
+<h2>1. サービスの性質</h2><p>本サービスは紫微斗数の命盤算出と AI による解説を提供するもので、参考情報にとどまり、<br>いかなる専門的助言（医療・法律・財務などを含む）も構成するものではありません。</p>
+<h2>2. 禁止事項</h2><p>お客様は、本サービスを違法行為、権利侵害、嫌がらせ、その他他者に損害を与える行為に利用しないことに同意するものとします。これには大量の自動化リクエストや意図的なシステム攻撃などが含まれますが、これらに限りません。</p>
+<h2>3. 知的財産権</h2><p>本サービスのすべてのコンテンツ（デザイン要素、AI 分析内容などを含む）は本サービスに帰属し、許可なく転載または商業利用することを禁じます。</p>
+<h2>4. 免責事項</h2><p>本サービスは AI 分析・解説の正確性や完全性を保証しません。本サービスの利用により生じたいかなる損失についても、本サービスは責任を負いません。</p>
+<h2>5. サービスの変更</h2><p>当方は、サービスの一部または全部をいつでも変更・停止・終了する権利を留保し、合理的な期間をもって事前にユーザーへお知らせします。</p>
+<h2>6. 規約の変更</h2><p>本規約に重大な変更がある場合は、サービス内でお知らせします。引き続きサービスを利用することで、変更後の規約に同意したものとみなされます。</p>
+<h2>7. 広告と有料機能</h2><p>本サービスは現在、サービス運営維持のため、広告（リワード広告およびバナー広告を含む）およびアプリ内購入（Apple App Store または Google Play 経由のポイントパック）を提供しています。広告関連データは本プライバシーポリシーに従って処理されます。有料項目の価格と内容は購入前に明確にご案内します。</p>
+<h2>お問い合わせ</h2><p>Email：<a href='mailto:node.7.claw@gmail.com'>node.7.claw@gmail.com</a></p>
+  </div>
 </div>
 <script>
-function toggleLang() {
-  var z = document.getElementById('zh'), e = document.getElementById('en'), b = document.getElementById('langBtn');
-  var showEn = z.style.display !== 'none';
-  z.style.display = showEn ? 'none' : '';
-  e.style.display = showEn ? '' : 'none';
-  b.textContent = showEn ? '中文' : 'English';
-  document.documentElement.lang = showEn ? 'en' : 'zh-TW';
-}
+(function () {
+  var KEY = 'xlqk-lang';
+  var PANES = { 'zh-TW': 'zh', 'en': 'en', 'ja': 'ja' };
+  var TITLE = {
+    'zh-TW': '隱私政策與使用條款 — 紫微推命',
+    'en': 'Privacy Policy & Terms of Use — Purple Star Astrology',
+    'ja': 'プライバシーポリシー・利用規約 — 紫微推命'
+  };
+  function apply(lang) {
+    if (!PANES[lang]) lang = 'zh-TW';
+    Object.keys(PANES).forEach(function (key) {
+      document.getElementById(PANES[key]).style.display = key === lang ? '' : 'none';
+    });
+    document.querySelectorAll('.lang-btn').forEach(function (btn) {
+      btn.setAttribute('aria-pressed', btn.getAttribute('data-lang') === lang ? 'true' : 'false');
+    });
+    document.documentElement.lang = lang;
+    document.title = TITLE[lang];
+  }
+  function initial() {
+    try { var saved = localStorage.getItem(KEY); if (saved) return saved; } catch (e) {}
+    var nav = (navigator.language || '').toLowerCase();
+    if (nav.indexOf('ja') === 0) return 'ja';
+    if (nav.indexOf('en') === 0) return 'en';
+    return 'zh-TW';
+  }
+  window.setLang = function (lang) {
+    apply(lang);
+    try { localStorage.setItem(KEY, lang); } catch (e) {}
+  };
+  apply(initial());
+})();
 </script>
 </body>
 </html>
